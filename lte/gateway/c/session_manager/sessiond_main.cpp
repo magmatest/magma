@@ -342,8 +342,7 @@ int main(int argc, char* argv[]) {
     if (config["poll_stats_interval"].IsDefined()) {
       interval = config["poll_stats_interval"].as<uint32_t>();
     }
-    periodic_stats_requester->start_loop(
-          local_enforcer, interval);
+    periodic_stats_requester->start_loop(local_enforcer, interval);
     periodic_stats_requester->stop();
   });
 
