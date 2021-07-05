@@ -594,7 +594,8 @@ int _nas5g_message_plain_encode(
     bytes = amf_msg_test.M5gNasMessageEncodeMsg(
         (AmfMsg*) &msg->amf, (uint8_t*) buffer, length);
 
-    OAILOG_INFO(LOG_AMF_APP, " nas5g messgage plain encode \n");
+    OAILOG_INFO(LOG_AMF_APP, " nas5g messgage plain encode %d \n", bytes);
+
     for (int i = 0; i < bytes; i++)
       OAILOG_INFO(LOG_AMF_APP, " buffer[%d] %2x", i, buffer[i]);
   } else {
